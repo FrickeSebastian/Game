@@ -16,23 +16,27 @@ struct field map[5][5] = {
 int main(int argc, char **argv)
 {
 	SDL_Window *screen;
+	SDL_Surface *scresur;
+	SDL_Surface *image;
 	SDL_Event event;
 
 	SDL_Init(SDL_INIT_EVERYTHING);
 
-	screen = SDL_CreateWindow("GME", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-	                          640, 480, 0);
+	screen = SDL_CreateWindow("G@ME", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+	                          640, 480, SDL_WINDOW_SHOWN);
 	if(!screen)
-		SDL_ShowSimpleMessageBox(0, "Screen init error", SDL_GetError(), 
-ShowSimpleMessageBox(0, "Renderer Init error",screen);
+	{
+		SDL_GetError();
+	}
+	else
+	{
+		scresur = SDL_GetWindowSurface(screen);
+	}
 
-	SDL_Renderer * renderer = SDL_CreateRenderer(screen, -1, 0);
-	if(!renderer)
-		ShowSimpleMessageBox(0, "Renderer Init error",
-	SDL_Surface * image = SDL_LoadBMP("home/Sebastian/gme/hello.bmp");
+	image = SDL_LoadBMP("hello.bmp");
 
-	SDL_Texture * texture = SDL_CreateTextureFromSurface(renderer,
-        image);
+	SDL_BlitSurface(image,NULL,scresur,NULL);
+	SDL_UpdateWindowSurface(screen);
 
 	if (!screen) {
 		printf("SDL Error: %s\n", SDL_GetError());
@@ -49,13 +53,8 @@ ShowSimpleMessageBox(0, "Renderer Init error",screen);
 			}
 		}
 	}
-
-	SDL_RenderCopy(renderer, texture, NULL, NULL);
-        SDL_RenderPresent(renderer);
-
-	SDL_DestroyTexture(texture);  
-    	SDL_FreeSurface(image);  
-    	SDL_DestroyRenderer(renderer);  
+  
+    	SDL_FreeSurface(image);    
     	SDL_DestroyWindow(screen);
 
 	SDL_Quit();
