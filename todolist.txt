@@ -6,5 +6,5 @@ TO DO LIST:
 	-> Zeichnen der Kartenteile (SF)
 	-> Zeichnen der Figur (SF)
 	-> blitten der Figur als Surface auf Cursur
-	-> Funktionen für die Bewegung der Figur mit den Tasten : (Pfeiltasten: hoch, runter, links, rechts)
+	-> Funktionen für die Bewegung der Figur mit den Tasten : (Pfeiltasten: hoch, runter, links, rechts)(Steven)
 	-> Scrollen auf der Karte durch Bewegung der Figur möglich machen
