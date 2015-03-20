@@ -1,0 +1,10 @@
+TO DO LIST:
+
+1. Darstellung der Karte
+	-> Funktion zum Laden der Bmp's pro FieldType
+	-> Übertragen der Karte auf cursur(current Surface) und blitten dieser auf scresur(screensurface)
+	-> Zeichnen der Kartenteile (SF)
+	-> Zeichnen der Figur (SF)
+	-> blitten der Figur als Surface auf Cursur
+	-> Funktionen für die Bewegung der Figur mit den Tasten : (Pfeiltasten: hoch, runter, links, rechts)
+	-> Scrollen auf der Karte durch Bewegung der Figur möglich machen
