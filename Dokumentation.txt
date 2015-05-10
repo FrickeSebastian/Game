@@ -5,18 +5,23 @@ Woche 2:	-Festlegung der Engine(SDL)
 		-konkretere Zielfestlegung zwecks Aussehen des Spiels und Möglichkeiten, die gegeben sein sollen
 		-Mit SDL beschäftigen, um die Prozesse zu verstehen
 
-Woche 3:	-Ansätze für Hauptfunktionen (Darstellung der Karte und Charakter)
+Woche 3:	-Ansätze für Hauptfunktionen (Darstellung der Karte und Charakter) mittels eines zweidimensionalen Arrays in
+		 einem Struct, welcher mittels einer Funktion auf der Mapsurface dargestellt werden soll
 		-Weiterhin mit SDL beschäftigen
 
-Woche 4:	-Erstellen eines Structs für die Karte
+Woche 4:	-Erstellen eines Structs für die Karte sowie der dazugehörigen Funktion
 		-Funktion des Beendens mittels Esc
 
 Woche 5:	-Zeichnung der Maptiles 
 
-Woche 6:	-Darstellung der Karte und des Spielcharakters im Fenster
+Woche 6:	-Darstellung der Karte und des Spielcharakters im Fenster, mittels einer Funktion
+		-Bugfix -> Charakter wurde teils hinter der Karte dargestellt
 
-Woche 7:	-Bewegung der Karte mit der Bewegung des Charakters (?)
+Woche 7:	-Bewegung des Charakters mittels eines Switches
+		-Bugfix, der den Charakter nur einmal darstellt und nicht an jeder Position, wo er schon mal war
 
-Woche 8:	-Einfügen einer Spacebar-Funktion für Aktionen seitens des Charakters
-
+Woche 8:	-Einfügen einer Spacebar-Funktion für Aktionen seitens des Charakters im Switch
+		-Optimieren der Spacebar-Funktion und des dazugehörigen Menüs
+		
 Woche 9:	-Einfügen einiger Aktionen seitens des Charakters
+		-Einfügen einiger Sounds mittels einer simplen Funktion
